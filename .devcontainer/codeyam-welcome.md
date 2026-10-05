@@ -12,7 +12,7 @@ If no tab opened, or you closed it:
 2. Find port **14199**, labelled **CodeYam Editor**.
 3. Click the globe icon on that row ("Open in Browser").
 
-Port 14199 is not listed until the install has finished. To watch its progress, press Ctrl+Shift+P (Cmd+Shift+P on a Mac) and run **Codespaces: View Creation Log**.
+Port 14199 is listed straight away, but until the editor is running it shows an error page (HTTP 502). While the codespace is still installing, watch its progress: press Ctrl+Shift+P (Cmd+Shift+P on a Mac) and run **Codespaces: View Creation Log**. If the install has finished and you still get the error, see below.
 
 ## Signing in
 
@@ -26,7 +26,7 @@ Its output is in a log file. In the terminal, run:
 cat .codeyam/logs/codespaces-editor.log
 ```
 
-To start it yourself, run this, then open port 14199 from the Ports panel:
+To start it yourself, run this and leave it running, then reload the editor tab (or open port 14199 from the Ports panel):
 
 ```bash
 codeyam-editor start --hosted --no-open --port 14199
