@@ -14,14 +14,15 @@ GitHub hosts for you and opens in your browser.
 
 ## What happens when you click it
 
-1. **GitHub may show a field for an Anthropic API key.** It is optional. Leave
-   it blank and sign in from inside the editor instead.
-2. **The codespace opens on a welcome page.** It shows where the editor is: the
+GitHub asks for nothing when it creates the codespace: there is no API key to
+fill in. You sign in to the AI inside the editor.
+
+1. **The codespace opens on a welcome page.** It shows where the editor is: the
    **Ports** panel at the bottom of the window, port 14199, labelled "CodeYam
    Editor". It also says what to do if the editor doesn't appear.
-3. **The codespace installs everything.** That means the editor, the Claude
+2. **The codespace installs everything.** That means the editor, the Claude
    Code CLI, and a browser for screenshots. The first time takes a few minutes.
-4. **The editor opens in a new tab on the New Project screen.** Pick the AI
+3. **The editor opens in a new tab on the New Project screen.** Pick the AI
    that should build, sign in to it, then describe what you want to build. The
    editor builds it with you against a live preview.
 
@@ -42,11 +43,15 @@ This template is never changed.
   the port public, the editor starts requiring its own one-time token.
 - **Stopping and restarting:** your files are kept, and the editor comes back
   on the same address when the codespace restarts.
-- **Skipped the key, or want to add it later:** open GitHub's
-  **Settings → Codespaces → Secrets**, add `ANTHROPIC_API_KEY`, give this
-  codespace's repository access to it, and rebuild the codespace.
-- **Using Codex or Gemini instead of Claude:** add `OPENAI_API_KEY` or
-  `GEMINI_API_KEY` the same way, then pick that agent in the editor.
+- **Signing in to Claude:** the editor shows a link. Open it, approve access,
+  and paste the code it gives you back into the editor. A rebuilt codespace
+  asks you to sign in again; a stopped and restarted one does not.
+- **Using Codex, Gemini or OpenCode instead:** pick it in the editor and paste
+  its API key there. The key is saved with your project. If you already keep
+  it as a Codespaces secret (`OPENAI_API_KEY`, `GEMINI_API_KEY` or
+  `OPENCODE_API_KEY` under GitHub's **Settings → Codespaces → Secrets**, with
+  access to this codespace's repository), the editor uses it and skips that
+  step.
 
 ## How this template is made
 
