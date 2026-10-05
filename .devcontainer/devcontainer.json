@@ -24,7 +24,7 @@
       "onAutoForward": "notify"
     }
   },
-  "postAttachCommand": "u=\"https://$CODESPACE_NAME-14199.$GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN\"; echo 'Waiting for the CodeYam Editor to start...'; i=0; until curl -s -o /dev/null --max-time 2 http://127.0.0.1:14199/; do i=$((i+1)); if [ $i -ge 300 ]; then echo 'The CodeYam Editor did not start. See .codeyam/logs/codespaces-editor.log'; exit 0; fi; sleep 2; done; printf '\\n==================================================\\n  CodeYam Editor is ready. Open it here (Cmd/Ctrl+click):\\n\\n  %s\\n==================================================\\n\\n' \"$u\"; if [ -n \"$BROWSER\" ]; then \"$BROWSER\" \"$u\" > /dev/null 2>&1; fi; true",
+  "postAttachCommand": "sh .devcontainer/codeyam-ready.sh",
   "postCreateCommand": "npm install -g @codeyam-editor/codeyam-editor@staging @anthropic-ai/claude-code && npx -y playwright install --with-deps chromium",
   "postStartCommand": "mkdir -p .codeyam/logs && setsid -f nohup codeyam-editor start --hosted --no-open --port 14199 > .codeyam/logs/codespaces-editor.log 2>&1 < /dev/null"
 }
