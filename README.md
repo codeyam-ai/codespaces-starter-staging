@@ -17,12 +17,13 @@ GitHub hosts for you and opens in your browser.
 GitHub asks for nothing when it creates the codespace: there is no API key to
 fill in. You sign in to the AI inside the editor.
 
-1. **The codespace opens on a welcome page.** It shows where the editor is: the
-   **Ports** panel at the bottom of the window, port 14199, labelled "CodeYam
-   Editor". It also says what to do if the editor doesn't appear.
-2. **The codespace installs everything.** That means the editor, the Claude
+1. **The codespace installs everything.** That means the editor, the Claude
    Code CLI, and a browser for screenshots. The first time takes a few minutes.
-3. **The editor opens in a new tab on the New Project screen.** Pick the AI
+   A welcome page explains what is happening while you wait.
+2. **Wait for the link in the terminal.** When the editor is ready, the
+   terminal panel at the bottom of the window shows a boxed "CodeYam Editor is
+   ready" with a link. Cmd+click it (Ctrl+click on Windows or Linux).
+3. **The editor opens on the New Project screen.** Pick the AI
    that should build, sign in to it, then describe what you want to build. The
    editor builds it with you against a live preview.
 

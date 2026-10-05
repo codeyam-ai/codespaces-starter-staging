@@ -1,18 +1,26 @@
 # CodeYam Editor
 
-You are inside your codespace. The CodeYam Editor runs here, on port 14199, and opens in its own browser tab.
+You are inside your codespace. The CodeYam Editor runs here and opens in its own browser tab.
 
 ## Opening the editor
 
-The first time, the codespace installs the editor before starting it, which takes a few minutes. When it is ready, the editor opens in a new tab on its own.
+**Wait for the link in the terminal.** The first time, the codespace installs the editor, which takes a few minutes; the terminal panel at the bottom of this window shows its progress. Then it says "Waiting for the CodeYam Editor to start...", and when the editor is ready it shows:
 
-If no tab opened, or you closed it:
+```text
+==================================================
+  CodeYam Editor is ready. Open it here (Cmd/Ctrl+click):
 
-1. Open the **Ports** panel, next to Terminal at the bottom of this window.
-2. Find port **14199**, labelled **CodeYam Editor**.
-3. Click the globe icon on that row ("Open in Browser").
+  https://<your-codespace>-14199.app.github.dev
+==================================================
+```
 
-Port 14199 is listed straight away, but until the editor is running it shows an error page (HTTP 502). While the codespace is still installing, watch its progress: press Ctrl+Shift+P (Cmd+Shift+P on a Mac) and run **Codespaces: View Creation Log**. If the install has finished and you still get the error, see below.
+**Cmd+click** that link (Ctrl+click on Windows or Linux).
+
+You may also see a notification in the bottom-right corner offering to open port 14199 in the browser. That opens the editor too.
+
+If your browser says it blocked a pop-up, choose to always allow pop-ups for this site. From then on the editor opens on its own.
+
+If you closed the terminal: open the **Ports** panel (next to Terminal), find port **14199** labelled **CodeYam Editor**, and click the globe icon on that row.
 
 ## Signing in
 
