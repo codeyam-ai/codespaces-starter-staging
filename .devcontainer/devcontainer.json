@@ -1,0 +1,27 @@
+{
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "forwardPorts": [
+    14199
+  ],
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb"
+  },
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "name": "CodeYam Editor",
+  "portsAttributes": {
+    "14199": {
+      "label": "CodeYam Editor",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "npm install -g @codeyam-editor/codeyam-editor@staging @anthropic-ai/claude-code && npx -y playwright install --with-deps chromium",
+  "postStartCommand": "mkdir -p .codeyam/logs && setsid nohup codeyam-editor start --hosted --no-open --port 14199 > .codeyam/logs/codespaces-editor.log 2>&1 &",
+  "secrets": {
+    "ANTHROPIC_API_KEY": {
+      "description": "API key for Claude, so the build agent is signed in when the editor opens"
+    }
+  }
+}
