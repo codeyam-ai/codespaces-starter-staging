@@ -1,4 +1,11 @@
 {
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        ".devcontainer/codeyam-welcome.md"
+      ]
+    }
+  },
   "features": {
     "ghcr.io/devcontainers/features/node:1": {}
   },
