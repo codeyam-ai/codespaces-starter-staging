@@ -1,3 +1,4 @@
+<!-- codeyam:codespaces-starter-readme -->
 # CodeYam Editor in GitHub Codespaces (staging)
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/codeyam-ai/codespaces-starter-staging?quickstart=1)
