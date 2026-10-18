@@ -25,4 +25,7 @@ printf '\n%s\n  CodeYam Editor is ready. Open it here (Cmd/Ctrl+click):\n\n  %s\
 if [ -n "${BROWSER:-}" ]; then
   "$BROWSER" "$url" > /dev/null 2>&1
 fi
-exit 0
+
+# Keep this codespace awake while the editor is busy.
+pkill -f codeyam-keepalive.sh 2>/dev/null
+exec sh .devcontainer/codeyam-keepalive.sh

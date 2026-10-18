@@ -22,6 +22,12 @@ If your browser says it blocked a pop-up, choose to always allow pop-ups for thi
 
 If you closed the terminal: open the **Ports** panel (next to Terminal), find port **14199** labelled **CodeYam Editor**, and click the globe icon on that row.
 
+## Staying awake
+
+GitHub stops a codespace after it has been idle for a while, and it only counts activity in this VS Code window, not in the editor tab. So while an AI agent is working or the editor tab is open, the terminal prints a "keep-alive" line every few minutes to keep the codespace running. Those lines are expected.
+
+**Keep this VS Code tab open in the background.** Closing it lets GitHub stop the codespace at its idle timeout even while the editor is in use. When nothing is working and the editor tab is closed, the lines stop and the codespace stops on its own.
+
 ## Signing in
 
 The first time you start the AI that builds with you, the editor asks you to sign in to it. Follow the steps on that screen.
