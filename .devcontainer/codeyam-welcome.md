@@ -34,13 +34,19 @@ The first time you start the AI that builds with you, the editor asks you to sig
 
 ## If the editor does not come up
 
+The terminal says so, and why: while it waits it shows what it is doing, it starts the editor again if it finds nothing running, and if the editor keeps stopping it prints the reason and what to run. To start the editor again in the background, run:
+
+```bash
+sh .devcontainer/codeyam-start.sh attach
+```
+
 Its output is in a log file. In the terminal, run:
 
 ```bash
 cat .codeyam/logs/codespaces-editor.log
 ```
 
-To start it yourself, run this and leave it running, then reload the editor tab (or open port 14199 from the Ports panel):
+To run it in the terminal instead and watch it start, run this and leave it running, then reload the editor tab (or open port 14199 from the Ports panel):
 
 ```bash
 codeyam-editor start --hosted --no-open --port 14199
